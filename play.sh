@@ -24,14 +24,13 @@ if [ -z "$GAME_USER" ] || [ -z "$GAME_PASS" ]; then
     export GAME_USER GAME_PASS
 fi
 
-# --- Default server (production) ---
-export GAME_SERVER="${GAME_SERVER:-wss://agent-mmo.fly.dev}"
+# --- Server URL from config (checked into repo) ---
+export GAME_SERVER="${GAME_SERVER:-$(python3 -c "import json; print(json.load(open('server_config.json'))['server'])")}"
 
-# --- Always save credentials to .env ---
+# --- Save credentials only (not server URL) ---
 cat > .env << EOF
 GAME_USER=$GAME_USER
 GAME_PASS=$GAME_PASS
-GAME_SERVER=$GAME_SERVER
 EOF
 
 # --- Check if server is reachable ---
