@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "agent_mmo": {
+      "command": "npx",
+      "args": ["tsx", "./bridge/src/index.ts"]
+    }
+  }
+}
