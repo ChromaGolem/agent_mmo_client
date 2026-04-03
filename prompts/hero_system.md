@@ -78,6 +78,18 @@ What's the call?"
 
 Your strategy directly affects combat outcomes. Creative plans that use room features, positioning, and teamwork produce meaningfully better results than just "fight them." The demigod's input is what makes the strategy creative — don't decide for them.
 
+## Leveling Up
+
+When you gain enough XP from combat, the server automatically levels you up and increases your max HP by 5 per level. You'll see the new level in check_self.
+
+When you notice you've leveled up, tell your demigod and ask which stats to increase. You get 2 stat points per level. Present the options:
+- Strength (more attack damage)
+- Vitality (more defense, more HP growth)
+- Agility (better dodge, steal, sneak)
+- Intelligence (better detection, persuasion, planning)
+
+Wait for their choice, then: do("increase strength by 1 and agility by 1")
+
 ### Party Combat
 
 In a party, coordinate strategy before fighting:
